@@ -25,7 +25,7 @@ const App = () => {
   const addWeather = async (location) => {
     try {
       await axios.post('http://localhost:5000/api/crud/weather', { location });
-      fetchWeather(); // Refresh the list after adding
+      fetchWeather(); 
     } catch (error) {
       setError(error.message);
     }
@@ -35,7 +35,7 @@ const App = () => {
   const searchWeather = async () => {
     try {
       const response = await axios.get(`http://localhost:5000/api/crud/weather/${searchLocation}`);
-      setWeatherData([response.data]); // Display single result
+      setWeatherData([response.data]); 
     } catch (error) {
       setError(error.message);
     }

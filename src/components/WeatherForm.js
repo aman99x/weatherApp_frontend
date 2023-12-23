@@ -6,7 +6,7 @@ const WeatherForm = ({ onAddWeather }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onAddWeather(location);
-    setLocation(''); // Clear the input
+    setLocation('');
   };
 
   return (
